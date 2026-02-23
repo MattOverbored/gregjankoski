@@ -1041,10 +1041,21 @@
     .section-divider { padding: 0 24px; }
   }
 
-  @media (prefers-reduced-motion: reduce) {
+  `@media` (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
-    .hero-tagline, .impact-chips { opacity: 1; }
+    .eyebrow,
+    .hero-name,
+    .hero-title,
+    .hero-tagline,
+    .hero-cta,
+    .hero-photo,
+    .impact-chips,
+    .stat-block,
+    .timeline-item {
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
