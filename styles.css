@@ -20,6 +20,9 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
+  }
+
+  body.js-cursor-active {
     cursor: none;
   }
 
