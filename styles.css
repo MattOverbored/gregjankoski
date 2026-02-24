@@ -419,6 +419,9 @@
     gap: 1px;
     background: var(--border);
   }
+  .awards-grid .award-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
   .award-card {
     background: var(--dark);
     padding: 36px 28px;
@@ -443,6 +446,15 @@
     letter-spacing: 0.2em;
     color: var(--gold);
     text-transform: uppercase;
+  }
+
+  /* ── EDUCATION ── */
+  .education {
+    padding: 80px 80px;
+  }
+  .education-inner {
+    margin-left: 32px;
+    max-width: 720px;
   }
 
   /* ── SKILLS ── */
