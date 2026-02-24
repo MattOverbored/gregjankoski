@@ -9,9 +9,6 @@
 <link rel="stylesheet" href="styles.css">
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursor-ring"></div>
-
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-left">
@@ -525,18 +522,6 @@
 </footer>
 
 <script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursor-ring');
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    setTimeout(() => {
-      ring.style.left = e.clientX + 'px';
-      ring.style.top = e.clientY + 'px';
-    }, 80);
-  });
-
   // Scroll reveal for timeline items
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {

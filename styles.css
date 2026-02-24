@@ -22,32 +22,6 @@
     overflow-x: hidden;
   }
 
-  body.js-cursor-active {
-    cursor: none;
-  }
-
-  /* Custom cursor */
-  .cursor {
-    width: 8px; height: 8px;
-    background: var(--gold);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s;
-  }
-  .cursor-ring {
-    width: 36px; height: 36px;
-    border: 1px solid rgba(201,169,110,0.5);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: all 0.15s ease;
-  }
-
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -125,7 +99,7 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    cursor: none;
+    cursor: pointer;
   }
   .btn::before {
     content: '';
@@ -500,7 +474,6 @@
     border: 1px solid var(--border);
     padding: 10px 16px;
     transition: all 0.3s ease;
-    cursor: none;
   }
   .skill-tag:hover {
     border-color: var(--gold);
@@ -552,7 +525,7 @@
     color: inherit;
     font: inherit;
     line-height: inherit;
-    cursor: none;
+    cursor: pointer;
     text-decoration: none;
     transition: color 0.25s ease, text-decoration-color 0.25s ease;
     text-decoration-color: transparent;
@@ -617,7 +590,7 @@
     border-bottom: 1px solid rgba(201,169,110,0.3);
     padding-bottom: 4px;
     transition: border-color 0.3s;
-    cursor: none;
+    cursor: pointer;
   }
   .contact-link:hover { border-color: var(--gold); }
 
