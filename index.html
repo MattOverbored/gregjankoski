@@ -500,7 +500,15 @@
 
 <!-- ── CONTACT ── -->
 <section class="contact">
-  <h2 class="contact-heading">Let's Work<br><em>Together</em></h2>
+  <h2 class="contact-heading">
+    <button type="button" class="contact-heading-toggle" id="contact-video-toggle" aria-expanded="false" aria-controls="contact-video-wrap">
+      Let's Work<br><em>Together</em>
+      <span class="contact-heading-hide" aria-hidden="true">Hide Video</span>
+    </button>
+  </h2>
+  <div class="contact-video" id="contact-video-wrap" hidden>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kzAm1nR8HrU?si=CepfpTjzgnaCSk04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   <p class="contact-sub">Open to Partner Management, Channel Sales, and Strategic AE roles — North America. One conversation is all it takes.</p>
   <div class="contact-links">
     <a href="mailto:gregjank23@gmail.com" class="contact-link">gregjank23@gmail.com</a>
@@ -539,6 +547,28 @@
   }, { threshold: 0.15 });
 
   document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+
+  const contactVideoToggle = document.getElementById('contact-video-toggle');
+  const contactVideoWrap = document.getElementById('contact-video-wrap');
+
+  if (contactVideoToggle && contactVideoWrap) {
+    contactVideoToggle.addEventListener('click', () => {
+      const isOpen = contactVideoWrap.classList.toggle('is-visible');
+      contactVideoWrap.hidden = !isOpen;
+      contactVideoToggle.setAttribute('aria-expanded', String(isOpen));
+      contactVideoToggle.classList.toggle('is-open', isOpen);
+
+      if (isOpen) {
+        setTimeout(() => {
+          contactVideoWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+      } else {
+        setTimeout(() => {
+          contactVideoToggle.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 80);
+      }
+    });
+  }
 </script>
 </body>
 </html>
